@@ -273,8 +273,8 @@ ul{
 #a4{
     -webkit-transform: rotateY(720deg);
     transform: rotateY(720deg);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
 
 }
 
