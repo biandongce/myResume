@@ -19,6 +19,55 @@ ul{
     margin-left: -320px;
     -webkit-transform-origin: top;
 }
+#tubiao{
+    position: absolute;
+    bottom:1%;
+    left: 48%;
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    -webkit-transform:rotate(-45deg);
+    z-index: 200;
+    animation: myfirst 0.6s linear 0s infinite alternate
+
+}
+@keyframes myfirst
+{
+    0%   {bottom: 1%;opacity: 0;}
+    25%  {bottom: 2%;opacity: 0.3;}
+    50%  {bottom: 3%;opacity: 0.6;}
+    100% {bottom: 4%;opacity: 0.9;}
+
+}
+
+.music{
+    width: 90px;
+    height:90px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 80%;
+    top: 2%;
+    z-index: 200;
+    animation: mysecond 1s linear 0s infinite   ;
+}
+@keyframes mysecond {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+.music-1{
+    width: 90px;
+    height:90px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 80%;
+    top: 2%;
+    z-index: 200;
+    -webkit-transform: rotate(0deg);
+}
 .slide li{
     width: 100%;
     height: 100%;
@@ -30,7 +79,7 @@ ul{
     background: url(images/a.jpg) no-repeat;
 }
 .slide li:nth-child(2){
-    background: url(images/b.jpg) no-repeat;
+    background: url(images/b.jpeg) no-repeat;
 }
 .slide li:nth-child(3){
     background: url(images/c.jpg) no-repeat;
@@ -39,12 +88,39 @@ ul{
     background: url(images/d.jpg) no-repeat;
 }
 .slide li:nth-child(5){
-    background: url(images/e.jpg) no-repeat;
+    background: url(images/e.png) no-repeat;
 }
 .zIndex {
     z-index: 111;
 }
-.a1{}
+.a1{width: 300px;
+    height:300px;
+    border: 5px solid darkslategray;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left:26% ;
+    overflow : hidden;
+
+}
+.jianli{
+    width: 300px;
+    height: 100px;
+    font-size:60px;
+    font-weight: bold;
+    position: absolute;
+    top:10%;
+    left: 30%;
+    color: #333333;
+
+}
+#a1  {
+
+    -webkit-transform: rotateY(720deg);
+    -webkit-transition: 0.5s;
+    overflow : hidden;
+}
+
 .a2{
     position: absolute;
     top:10%;
@@ -60,7 +136,7 @@ ul{
     color: black;
     height: 50px;
     line-height: 50px;
-    font-style:italic;
+
 }
 .a2 .a2-1{
     font-style:italic;
@@ -68,11 +144,11 @@ ul{
     font-size:50px ;
 }
 .a2 p:nth-child(odd){
-    -webkit-transform: translate(600px,0);
+    -webkit-transform: translate(800px,0);
 }
 
 .a2 p:nth-child(even){
-   -webkit-transform: translate(-600px,0);
+   -webkit-transform: translate(-800px,0);
 }
 #a2 p{
     -webkit-transform: translate(0,0);
@@ -80,8 +156,9 @@ ul{
 }
 
 .a3 p{
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
+    line-height: 65px;
     position: absolute;
     left:50%;
     top:50%;
@@ -89,7 +166,9 @@ ul{
     margin-top: -45px;
     border-radius: 50%;
     overflow: hidden;
-    font-size: 25px;
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
     text-align: center;
 
 }
@@ -100,22 +179,25 @@ ul{
 
 }
 .a3 p:nth-child(1){
-    background: url(images/c1.png) no-repeat;
+    background:red /*url(images/c1.png) no-repeat;*/
 }
 .a3 p:nth-child(2){
-    background: url(images/c2.png) no-repeat;
+    background:darkblue /*url(images/c2.png) no-repeat;*/
 }
 .a3 p:nth-child(3){
-    background: url(images/c3.png) no-repeat;
+    background:purple /*url(images/c3.png) no-repeat;*/
 }
 .a3 p:nth-child(4){
-    background: url(images/c4.png) no-repeat;
+    background:yellow /*url(images/c4.png) no-repeat;*/
 }
 .a3 p:nth-child(5){
-    background: url(images/c5.png) no-repeat;
+    background:mediumspringgreen /*url(images/c5.png) no-repeat;*/
 }
 .a3 p:nth-child(6){
-    background: url(images/c6.png) no-repeat;
+    background:darkorange /*url(images/c6.png) no-repeat;*/
+}
+.a3 p:nth-child(7){
+    background:lime /*url(images/c6.png) no-repeat;*/
 }
 #a3 p:nth-child(1){
     left:50%;
@@ -152,7 +234,6 @@ ul{
     left:50%;
     top:10%;
     font-size: 35px;
-
     margin-left: -230px;
 
 }
@@ -166,25 +247,32 @@ ul{
     -webkit-transition: 0.5s;
 
 }
+
 .a5 p{
-    width:0;
-    height: 0;
+    width: 500px;
+    height: 860px;
     word-wrap: break-word;
     overflow: hidden;
     box-shadow: 1px 1px 10px rgb(255,255,255);
-    line-height: 20px;
-    color: #fff;
-    font-size: 14px;
+    -webkit-transform: scale(0.1);
+    opacity: 0;
+    line-height: 50px;
+    color: black;
+    font-size: 28px;
     position:absolute;
     left:10%;
     top:5%
+
 }
+
 #a5 p{
     font-size: 28px;
     font-family: '微软雅黑', 'Microsoft YaHei', Arial, SimHei, sans-serif;
     line-height: 50px;
-    width: 500px;
-    height: 860px;
+   /* width: 500px;
+    height: 860px;*/
+    opacity: 1;
+    -webkit-transform: scale(1.0);
     -webkit-transition: 1s;
 }
 

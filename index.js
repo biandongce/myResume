@@ -1,5 +1,6 @@
 var main = document.querySelector("#main");
 var oLis = document.querySelectorAll(".slide>li");
+var oDiv = document.querySelector(".a1");
 var winW = document.documentElement.clientWidth;
 var winH = document.documentElement.clientHeight;
 var desW = 640;
@@ -77,4 +78,30 @@ function end(e){
 
 
 document.documentElement.addEventListener("touchstart", function(){}, false);
+window.addEventListener("load", function () {
+    var musicAudio = document.querySelector("#musicAudio");
+    var music = document.querySelector(".music");
 
+    musicAudio.addEventListener("canplay", function () {
+        music.style.display = "block";
+        music.className = "music move";
+    }, false);
+    musicAudio.play();
+
+    $t.tap(music, {
+        end: function (e) {
+            if (musicAudio.paused) {
+                musicAudio.play();
+                this.className = "music";
+                return;
+            }
+            musicAudio.pause();
+            this.className = "music-1";
+        }
+    });
+}, false);
+
+window.setTimeout(function () {
+
+  oDiv.id = "a1";
+}, 300);
